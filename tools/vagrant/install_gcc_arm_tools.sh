@@ -83,9 +83,9 @@ install-openocd () {
 install-jlink () {
 	echo -e "\n\nInstalling J-Link Software and Documentation Pack..."
 	echo -e "\nDownloading J-Link Software and Documentation Pack..."
-	
-	wget --post-data "accept_license_agreement=accepted&submit=Download+software" \
-			-nv "https://www.segger.com/downloads/jlink/JLink_Linux_x86_64.deb"
+
+        wget --post-data "non_emb_ctr=confirmed&accept_license_agreement=accepted&submit=Download+software" \
+             -nv "https://www.segger.com/downloads/jlink/JLink_Linux_x86_64.deb"
 		
 	echo -e "\nInstalling the Package..."
 	yes Y | sudo dpkg -i "JLink_Linux_x86_64.deb"
